@@ -1,5 +1,8 @@
 # Claude Code Settings/Commands/Skills for Vibe Coding
 
+[![Run in Smithery](https://smithery.ai/badge/skills/feiskyer)](https://smithery.ai/skills?ns=feiskyer&utm_source=github&utm_medium=badge)
+
+
 A curated collection of Claude Code settings, custom commands, skills and sub-agents designed for enhanced development workflows. This setup includes specialized commands, skills and subagents for feature development (spec-driven workflow), code analysis, GitHub integration, and knowledge management.
 
 > For OpenAI Codex settings, configurations and custom prompts, please refer [feiskyer/codex-settings](https://github.com/feiskyer/codex-settings).

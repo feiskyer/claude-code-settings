@@ -82,7 +82,7 @@ Options:
   --model <model>            Model alias or ID (default: sonnet)
   --fallback-model <m>       Fallback model if primary overloaded
   --effort <level>           Thinking effort: low|medium|high (default: high)
-  --permission-mode <m>      Permission mode (default: auto)
+  --permission-mode <m>      Permission mode (default: bypassPermissions)
   --add-dir <dirs>           Extra directories to allow access
   --list, -l                 List all tasks with progress
   --help, -h                 Show this help

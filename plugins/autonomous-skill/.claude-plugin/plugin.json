@@ -1,6 +1,6 @@
 {
   "name": "autonomous-skill",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Use when user wants to execute long-running tasks that require multiple sessions to complete. This skill manages task decomposition, progress tracking, and autonomous execution using Claude Code headless mode with auto-continuation. Trigger phrases: autonomous, long-running task, multi-session, 自主执行, 长时任务, autonomous skill.",
   "author": {
     "name": "Pengfei Ni",

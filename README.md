@@ -521,15 +521,7 @@ For Claude Code 2.0+ extension in VSCode, if you're not using a Claude.ai subscr
       "value": "gpt-5-mini"
     },
     {
-      "name": "DISABLE_NON_ESSENTIAL_MODEL_CALLS",
-      "value": "1"
-    },
-    {
       "name": "DISABLE_TELEMETRY",
-      "value": "1"
-    },
-    {
-      "name": "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC",
       "value": "1"
     }
   ]

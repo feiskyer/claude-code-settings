@@ -139,8 +139,7 @@ Open the link, login and authenticate your GitHub Copilot account.
     "ANTHROPIC_MODEL": "claude-opus-4.6[1m]",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4.6",
     "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
-    "DISABLE_TELEMETRY": "1",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+    "DISABLE_TELEMETRY": "1"
   }
 }
 ```
@@ -160,7 +159,6 @@ export ANTHROPIC_MODEL="claude-opus-4.6[1m]"
 export ANTHROPIC_DEFAULT_HAIKU_MODEL="claude-sonnet-4.6"
 export DISABLE_TELEMETRY="1"
 export DISABLE_NON_ESSENTIAL_MODEL_CALLS="1"
-export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC="1"
 
 claude
 ```

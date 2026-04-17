@@ -45,7 +45,6 @@ Once succeeds, you'd see the model list and API address:
     "ANTHROPIC_MODEL": "claude-sonnet-4.5",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5-mini",
     "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "CLAUDE_CODE_ATTRIBUTION_HEADER": "0"
   }
 }
@@ -65,7 +64,6 @@ export ANTHROPIC_AUTH_TOKEN="sk-dummy"
 export ANTHROPIC_MODEL="claude-sonnet-4.5"
 export ANTHROPIC_DEFAULT_HAIKU_MODEL="gpt-5-mini"
 export DISABLE_NON_ESSENTIAL_MODEL_CALLS="1"
-export CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC="1"
 export CLAUDE_CODE_ATTRIBUTION_HEADER="0"
 
 claude

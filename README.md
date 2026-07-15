@@ -309,7 +309,8 @@ Please visit https://github.com/login/device and enter code XXXX-XXXX to authent
 | [vertex-settings.json](settings/vertex-settings.json) | Google Cloud Vertex AI |
 | [azure-settings.json](settings/azure-settings.json) | Azure AI（Anthropic 兼容端点） |
 | [azure-foundry-settings.json](settings/azure-foundry-settings.json) | Azure AI Foundry 原生模式 |
-| [minimax.json](settings/minimax.json) | MiniMax-M2 |
+| [minimax.json](settings/minimax.json) | MiniMax-M3, MiniMax-M2.7, and MiniMax-M2 (global endpoint) |
+| [minimax-cn.json](settings/minimax-cn.json) | MiniMax-M3, MiniMax-M2.7, and MiniMax-M2 (China endpoint) |
 | [openrouter-settings.json](settings/openrouter-settings.json) | OpenRouter（多模型统一 API） |
 
 ## 脚本工具

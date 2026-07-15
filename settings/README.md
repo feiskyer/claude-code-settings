@@ -45,7 +45,20 @@ Configuration for using Claude Code with Azure AI Foundry native mode. Uses `CLA
 
 ### [minimax.json](minimax.json)
 
-Configuration for using Claude Code with MiniMax API. Uses the MiniMax-M2 model.
+Configuration for using Claude Code with the MiniMax global Anthropic-compatible API. Uses MiniMax-M3 by default, maps the Sonnet alias to MiniMax-M2.7, and preserves MiniMax-M2 as the small-model fallback.
+
+### [minimax-cn.json](minimax-cn.json)
+
+Configuration for using Claude Code with the MiniMax China Anthropic-compatible API. It uses the same model mapping as the global configuration.
+
+#### MiniMax API endpoints
+
+| Region | Anthropic-compatible base URL | OpenAI-compatible base URL |
+|--------|-------------------------------|----------------------------|
+| Global | `https://api.minimax.io/anthropic` | `https://api.minimax.io/v1` |
+| China | `https://api.minimaxi.com/anthropic` | `https://api.minimaxi.com/v1` |
+
+Claude Code uses the Anthropic-compatible base URL and appends `/v1/messages` to it. Keep the configured base URL ending in `/anthropic`; do not append `/v1`. Use the OpenAI-compatible base URL only with clients that accept an OpenAI API base URL.
 
 ### [openrouter-settings.json](openrouter-settings.json)
 

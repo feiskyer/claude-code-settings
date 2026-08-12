@@ -58,7 +58,7 @@ Configuration for using Claude Code with the MiniMax China Anthropic-compatible 
 | Global | `https://api.minimax.io/anthropic` | `https://api.minimax.io/v1` |
 | China | `https://api.minimaxi.com/anthropic` | `https://api.minimaxi.com/v1` |
 
-Claude Code uses the Anthropic-compatible base URL and appends `/v1/messages` to it. Keep the configured base URL ending in `/anthropic`; do not append `/v1`. Use the OpenAI-compatible base URL only with clients that accept an OpenAI API base URL.
+Claude Code uses the Anthropic-compatible base URL and appends `/v1/messages` to it. Keep the configured base URL ending in `/anthropic`; do not append `/v1`. Use the OpenAI-compatible base URL only with clients that accept an OpenAI API base URL. Both templates set `CLAUDE_CODE_AUTO_COMPACT_WINDOW` to match the current one-million-token context window.
 
 ### [openrouter-settings.json](openrouter-settings.json)
 

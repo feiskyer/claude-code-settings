@@ -283,6 +283,32 @@ Please visit https://github.com/login/device and enter code XXXX-XXXX to authent
 </details>
 
 <details>
+<summary><b>agent-run-forensics</b> — 从录像回答「它刚才为什么那么做」</summary>
+
+### [agent-run-forensics](./skills/agent-run-forensics)
+
+问一次已经发生的运行到底做了什么，答案来自那次运行的**录像**，而不是 agent 自己的回忆。
+
+**触发词：** 「上次那个文件是哪一步改的」「复现同事报的那个失败」「把这次翻车变成回归用例」
+
+**核心特性：**
+
+- **证据优先于回忆**：agent 对自己运行过程的复述来自它上下文窗口的摘要，里面已经没有工具返回值、shell 退出码，也没有那些没人提起却确实被改掉的文件——答案通顺、自信，偶尔是错的
+- **区分「录到的」与「推断的」**：每条因果边标 `recorded` 或 `inferred`，后者必须写出所依据的规则，不允许压成同一句自信的话
+- **「为什么」走因果链定位**到单个事件，而不是通读整条时间线再猜
+- **离线重放**：模型回复来自录像、不联系服务商、不花 token，可当 CI 回归用例
+
+**边界（技能正文里写明，不藏在文档里）：**
+
+- 重放挡的是**模型侧出网，不是网络隔离**——录下的 shell 命令会真的再执行一次，**它不是沙箱**，首次重放前必须先读那些命令，并在隔离副本里跑
+- **重放成功 ≠ 确定性结论**：模型没有被重新提问，是把录下的回复喂回去
+- 没录过的会话找不回来；技能里有明确的「没有录像」分支，直接说出来而不是改用回忆补齐
+
+**依赖：** Node 20+ 与 `npm i -g orcareplay`，注册 `{"command": "orca", "args": ["mcp"]}`。
+
+</details>
+
+<details>
 <summary><b>github-fix-issue</b> — 端到端修复 GitHub Issue</summary>
 
 ### [github-fix-issue](./skills/github-fix-issue)

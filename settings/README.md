@@ -45,11 +45,13 @@ Configuration for using Claude Code with Azure AI Foundry native mode. Uses `CLA
 
 ### [minimax.json](minimax.json)
 
-Configuration for using Claude Code with the MiniMax global Anthropic-compatible API. Uses MiniMax-M3 by default, maps the Sonnet alias to MiniMax-M2.7, and preserves MiniMax-M2 as the small-model fallback.
+Configuration for using Claude Code with the MiniMax global Anthropic-compatible API. Uses MiniMax-M3.1-Flash by default and for the Sonnet, Haiku, and small-model aliases. The Opus alias selects MiniMax-M3. These are sample defaults: keep any explicitly chosen legacy or custom model IDs when updating an existing configuration.
 
 ### [minimax-cn.json](minimax-cn.json)
 
 Configuration for using Claude Code with the MiniMax China Anthropic-compatible API. It uses the same model mapping as the global configuration.
+
+Keep `alwaysThinkingEnabled` enabled for MiniMax-M3.1-Flash, which supports adaptive thinking only. Its supported effort levels are `low`, `medium`, `high`, `xhigh`, and `max`; Claude Code's `--effort` option controls this. MiniMax-M3 also supports disabled thinking and ignores effort. See the [MiniMax model guide](https://platform.minimax.io/docs/guides/models-intro.md).
 
 #### MiniMax API endpoints
 
@@ -62,4 +64,4 @@ Claude Code uses the Anthropic-compatible base URL and appends `/v1/messages` to
 
 ### [openrouter-settings.json](openrouter-settings.json)
 
-Configuration for using Claude Code with OpenRouter API. OpenRouter provides access to many models through a unified API. Note: `ANTHROPIC_API_KEY` must be explicitly blank while `ANTHROPIC_AUTH_TOKEN` contains your OpenRouter API key. By default, Claude Code uses Anthropic model aliases (Sonnet, Opus, Haiku), which OpenRouter automatically maps. You can override with custom models using `ANTHROPIC_DEFAULT_SONNET_MODEL`, `ANTHROPIC_DEFAULT_OPUS_MODEL`, and `ANTHROPIC_DEFAULT_HAIKU_MODEL`.
+Configuration for using Claude Code with OpenRouter API. OpenRouter provides access to many models through a unified API. Note: `ANTHROPIC_API_KEY` must be explicitly blank while `ANTHROPIC_AUTH_TOKEN` contains your OpenRouter API key. By default, Claude Code uses Anthropic model aliases (Sonnet, Opus, Haiku), which OpenRouter automatically maps. You can override with custom models using `ANTHROPIC_DEFAULT_SONNET_MODEL`, `ANTHROPIC_DEFAULT_OPUS_MODEL`, and `ANTHROPIC_DEFAULT_HAIKU_MODEL`. The template maps Haiku to `minimax/minimax-m3.1-flash:free`, the MiniMax Flash route listed in the [OpenRouter model catalog](https://openrouter.ai/api/v1/models). Keep the `:free` suffix for this route.

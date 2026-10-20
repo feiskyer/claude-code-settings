@@ -336,8 +336,8 @@ Please visit https://github.com/login/device and enter code XXXX-XXXX to authent
 | [vertex-settings.json](settings/vertex-settings.json) | Vertex AI | 已有 GCP 环境 |
 | [azure-settings.json](settings/azure-settings.json) | Azure AI | 已有 Azure 环境（Anthropic 兼容） |
 | [azure-foundry-settings.json](settings/azure-foundry-settings.json) | Azure AI Foundry | Azure 原生模式 |
-| [minimax.json](settings/minimax.json) | MiniMax M3/M2.7/M2 | MiniMax 平台用户（全球端点） |
-| [minimax-cn.json](settings/minimax-cn.json) | MiniMax M3/M2.7/M2 | MiniMax 平台用户（中国端点） |
+| [minimax.json](settings/minimax.json) | MiniMax M3.1 Flash/M3 | MiniMax 平台用户（全球端点） |
+| [minimax-cn.json](settings/minimax-cn.json) | MiniMax M3.1 Flash/M3 | MiniMax 平台用户（中国端点） |
 | [openrouter-settings.json](settings/openrouter-settings.json) | OpenRouter | 一个 key 访问多个模型 |
 
 ## 脚本工具

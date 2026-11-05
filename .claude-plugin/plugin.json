@@ -1,7 +1,7 @@
 {
   "name": "claude-code-settings",
   "displayName": "Claude Code Settings",
-  "version": "2.4.3",
+  "version": "2.5.0",
   "description": "Claude Code settings, agents and skills for enhanced development workflows",
   "author": {
     "name": "Pengfei Ni",

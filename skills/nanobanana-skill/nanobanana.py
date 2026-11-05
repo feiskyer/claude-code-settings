@@ -57,8 +57,14 @@ def main():
     parser.add_argument(
         "--model",
         type=str,
-        default="gemini-3.1-flash-image-preview",
-        help="Model to use for image generation (default: gemini-3.1-flash-image-preview)",
+        default="gemini-nano-banana-2.1",
+        choices=[
+            "gemini-nano-banana-2.1",
+            "gemini-3.1-flash-image",
+            "gemini-3-pro-image",
+            "gemini-2.5-flash-image",
+        ],
+        help="Model to use for image generation (default: gemini-nano-banana-2.1)",
     )
     parser.add_argument(
         "--resolution",
@@ -125,9 +131,11 @@ def main():
             image_size=args.resolution,
         ),
     }
-    if not getattr(args, "no_search", False):
+    # gemini-2.5 image models reject Google Search grounding and thinking
+    legacy_model = args.model.startswith("gemini-2.5")
+    if not args.no_search and not legacy_model:
         config_kwargs["tools"] = [types.Tool(google_search=types.GoogleSearch())]
-    if not getattr(args, "no_think", False):
+    if not args.no_think and not legacy_model:
         config_kwargs["thinking_config"] = types.ThinkingConfig(include_thoughts=True)
 
     # Generate or edit image
@@ -151,6 +159,9 @@ def main():
         if part.text is not None:
             print(f"{part.text}", end="")
         elif part.inline_data is not None and part.inline_data.data is not None:
+            # Skip draft images produced during thinking; keep only the final one
+            if part.thought:
+                continue
             image = Image.open(BytesIO(part.inline_data.data))
 
             image.save(args.output)

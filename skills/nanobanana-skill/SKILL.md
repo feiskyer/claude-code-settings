@@ -22,7 +22,7 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
    - What they want to create (the prompt)
    - Desired aspect ratio/size (optional, defaults to 9:16 portrait)
    - Output filename (optional, auto-generates UUID if not specified)
-   - Model preference (optional, defaults to gemini-3.1-flash-image-preview)
+   - Model preference (optional, defaults to gemini-nano-banana-2.1)
    - Resolution (optional, defaults to 1K)
 
 2. Run the nanobanana script with appropriate parameters:
@@ -63,8 +63,10 @@ Generate or edit images using Google Gemini API through the nanobanana tool.
 
 ### Models (--model)
 
-- `gemini-3.1-flash-image-preview` (default) - Latest, fast generation
-- `gemini-3-pro-image-preview` - Higher quality, supports thinking/reasoning
+- `gemini-nano-banana-2.1` (default) - Latest, fast, high quality
+- `gemini-3.1-flash-image` - Previous fast model
+- `gemini-3-pro-image` - Higher quality for detailed/complex scenes
+- `gemini-2.5-flash-image` - Legacy model; no Google Search or thinking (auto-disabled), always outputs 1K regardless of `--resolution`
 
 ### Resolution (--resolution)
 
@@ -118,7 +120,7 @@ python3 ${CLAUDE_SKILL_DIR}/nanobanana.py \
 ```bash
 python3 ${CLAUDE_SKILL_DIR}/nanobanana.py \
   --prompt "Detailed portrait of a cat in watercolor style" \
-  --model gemini-3-pro-image-preview \
+  --model gemini-3-pro-image \
   --output "cat-portrait.png"
 ```
 
@@ -138,4 +140,4 @@ If the script fails:
 3. For social media posts, use 9:16 for stories or 1:1 for posts
 4. For wallpapers, use 16:9 or 21:9
 5. Start with 1K resolution for testing, upgrade to 2K/4K for final output
-6. Use gemini-3-pro-image-preview for best quality, gemini-3.1-flash-image-preview (default) for speed
+6. Use gemini-nano-banana-2.1 (default) for most tasks; try gemini-3-pro-image for complex, detail-heavy scenes

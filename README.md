@@ -152,7 +152,7 @@ Please visit https://github.com/login/device and enter code XXXX-XXXX to authent
 
 - 多种宽高比和分辨率（1K、2K、4K）
 - 图片编辑功能
-- 多模型选择（gemini-3.1-flash-image-preview 默认, gemini-3-pro-image-preview 高质量）
+- 多模型选择（gemini-nano-banana-2.1 默认、gemini-3.1-flash-image、gemini-3-pro-image、gemini-2.5-flash-image）
 
 **依赖：**
 

@@ -127,5 +127,7 @@
   "statusLine": {
     "type": "command",
     "command": "~/.claude/status-line.sh"
-  }
+  },
+  "cleanupPeriodDays": 999999,
+  "desktopSessionCleanupPeriodDays": 999999
 }

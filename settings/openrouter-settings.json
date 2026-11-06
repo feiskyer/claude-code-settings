@@ -5,7 +5,7 @@
     "ANTHROPIC_API_KEY": "",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "openai/gpt-5.1-codex-max",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "openai/gpt-5.2-pro",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "minimax/minimax-m2:exacto",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "minimax/minimax-m3.1-flash:free",
     "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
     "DISABLE_TELEMETRY": "1",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"

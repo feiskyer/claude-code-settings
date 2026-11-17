@@ -360,6 +360,7 @@ WebSearch 是 [Anthropic 专有工具](https://docs.anthropic.com/en/docs/agents
 - [Brave MCP](https://github.com/brave/brave-search-mcp-server)
 - [Firecrawl MCP](https://docs.firecrawl.dev/mcp-server)
 - [DuckDuckGo Search MCP](https://github.com/nickclyde/duckduckgo-mcp-server)
+- [Parallel MCP setup](https://docs.parallel.ai/integrations/mcp/quickstart) — 按需启用的[公开资料来源核验流程](guidances/parallel-source-verification.md)，搜索后读取原文并保留来源链接
 
 ## 常见问题
 
